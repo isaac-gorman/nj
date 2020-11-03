@@ -1,0 +1,23 @@
+.NavContainer{
+    width: 100vw;
+    height: 80px;
+    border-bottom: 1px solid lightslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavBody{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.link{
+    font-size: 18px;
+}
+
+.link:hover{
+    color: blue;
+}
