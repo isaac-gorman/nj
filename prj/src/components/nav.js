@@ -14,6 +14,9 @@ function Nav(){
                 <Link href="/notes" >
                     <a className={styles.link} >All Notes</a>
                 </Link>
+
+                    <a href={process.env.HELP_APP_URL} target="_blank" className={styles.link} >Help</a>
+           
             </nav>
         </header>
     )

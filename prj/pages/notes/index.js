@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-function AllNotesPage(){
-  const notes = new Array(15).fill(1).map((e, i) => ({id: i, title: `Note: ${i}`}))
+function AllNotesPage({notes}){
 
   return (
     <div>
@@ -20,5 +19,18 @@ function AllNotesPage(){
     </div>
   )
 }
+
+
+
+export async function getServerSideProps() {
+  const res = await fetch(`${process.env.API_UTL}/api/note/`)
+  const {data} = await res.json()
+
+  console.log(data)
+  return {
+    props: {notes: data}
+  }
+}
+
 
 export default AllNotesPage
